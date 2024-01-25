@@ -39,7 +39,6 @@ df = pd.DataFrame(zipped_data, columns=['Link', 'Price', 'Address'], index=None)
 bot = FormFiller()
 bot.open_form(form_link)
 
-# TODO: After entering all the data in the form, create a spreadsheet from the form.
 for idx, row in df.iterrows():
     bot.enter_form(link=row.Link, price=row.Price, address=row.Address)
     bot.open_new_form()
